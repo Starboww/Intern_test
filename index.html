@@ -1,0 +1,39 @@
+<Html>
+    <title>webapp</title>
+    <Head>  
+        <script src="index.js" ></script>
+     <script>
+//          function IsJsonString(str) {
+//     try {
+//         JSON.parse(str);
+//     } catch (e) {
+//         return false;
+//     }
+//     return true;
+// }
+     async function  submit() {
+           
+    try {
+       // document.getElementBy("textarea").value
+    
+   let res = await fetch("/jsonapi",{method:"POST",body:( document.getElementById("tt").value)});
+  
+ // console.log(res.body)
+ //console.log(su()+"fsdf")
+    } catch (error) {
+        console.log(error)
+    }
+    
+  }
+
+     </script>
+    </Head>  
+    <Body>  
+     
+        <textarea  id="tt" rows="9" cols="70">  
+           NULL
+            </textarea>  
+            <button onclick="submit()" type="button" >Click Me!</button>
+       
+    </Body>  
+    </Html>  
